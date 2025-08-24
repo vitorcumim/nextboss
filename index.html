@@ -45,12 +45,12 @@
         <nav class="hidden md:flex items-center gap-6 text-sm">
           <a href="#como-funciona" class="hover:text-ink-700">Como funciona</a>
           <a href="#cursos" class="hover:text-ink-700">Cursos</a>
-          <a href="#planos" class="hover:text-ink-700">Planos</a>
+          <a href="#beneficio" class="hover:text-ink-700">Planos</a>
           <a href="#faq" class="hover:text-ink-700">FAQ</a>
         </nav>
         <div class="hidden md:flex items-center gap-3">
-          <a href="#" class="text-sm font-medium hover:text-ink-700">Entrar</a>
-          <a href="#cta" class="inline-flex items-center rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-brand-700">Começar grátis</a>
+
+          <a href="#" class="inline-flex items-center rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-brand-700">Tenho interesse</a>
         </div>
         <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300" aria-label="Abrir menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" /></svg>
@@ -61,14 +61,15 @@
       <div class="px-4 py-3 space-y-2 text-sm">
         <a href="#como-funciona" class="block">Como funciona</a>
         <a href="#cursos" class="block">Cursos</a>
-        <a href="#planos" class="block">Planos</a>
+        <a href="#beneficio" class="block">Planos</a>
         <a href="#faq" class="block">FAQ</a>
-        <a href="#cta" class="block font-semibold text-brand-700">Começar grátis</a>
+        <a href="#" class="block font-semibold text-brand-700">Tenho interesse</a>
       </div>
     </div>
   </header>
 
   <!-- Hero -->
+   
   <section class="relative overflow-hidden">
     <div class="absolute inset-0 -z-10">
       <!-- Fundo inspirado no visual de referência -->
@@ -80,22 +81,27 @@
         <div>
           <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-ink-900">Soft skills com <span class="text-brand-700">ciência</span> e <span class="text-brand-700">gamificação</span>.</h1>
           <p class="mt-4 text-lg text-slate-700">A Next Boss é um app para desenvolver habilidades interpessoais e emocionais no ambiente de trabalho. Lições e modulos personalizadas por IA, exercícios de compreensão de <strong>texto</strong> e <strong>fala</strong>, desafios, recompensas e <strong>certificados</strong>.</p>
-          <form id="heroForm" class="mt-6 flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); document.getElementById('cta').scrollIntoView({behavior:'smooth'});">
-            <input type="email" required placeholder="Seu e-mail" class="w-full sm:w-72 rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500">
-            <button class="rounded-xl bg-brand-600 px-5 py-3 font-semibold text-white hover:bg-brand-700">Quero começar grátis</button>
-          </form>
+          <!-- Botão para Google Forms substituindo o formulário -->
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScR-PPM8fAuL4fY-dLSTxrqSSUPYBWyePiMwLRQupV2KQjwrg/viewform?usp=sharing&ouid=107146770865161227846" target="_blank" rel="noopener noreferrer"
+              class="rounded-xl bg-brand-600 px-5 py-3 font-semibold text-white hover:bg-brand-700 text-center w-full sm:w-auto">
+              Vamos Conversar
+            </a>
+          </div>
           <div class="mt-4 flex items-center gap-4 text-sm text-slate-600">
             <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293A1 1 0 003.293 10.707l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>Sem cartão</span>
             <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293A1 1 0 003.293 10.707l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>7 dias de teste do Plus</span>
           </div>
         </div>
         <div class="relative">
-          <div class="aspect-video rounded-2xl bg-gradient-to-br from-ink-600/10 to-brand-300/40 shadow-inner flex items-center justify-center">
-            <div class="rounded-full bg-brand-600 w-16 h-16 flex items-center justify-center shadow-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-white"><path d="M8 5v14l11-7z"/></svg>
+            <div class="flex flex-row gap-4 items-center justify-center w-full h-full px-2">
+              <img src="telas/1.png" alt="Tela 1 Next Boss" class="h-48 rounded-xl shadow-lg border-4 border-white object-contain bg-white" />
+              <img src="telas/2.png" alt="Tela 2 Next Boss" class="h-48 rounded-xl shadow-lg border-4 border-white object-contain bg-white" />
+              <img src="telas/3.png" alt="Tela 3 Next Boss" class="h-48 rounded-xl shadow-lg border-4 border-white object-contain bg-white" />
+              <img src="telas/4.png" alt="Tela 3 Next Boss" class="h-48 rounded-xl shadow-lg border-4 border-white object-contain bg-white" />
             </div>
           </div>
-          <p class="sr-only">Espaço para imagem ou vídeo de demonstração</p>
+          <p class="sr-only">Imagens de telas do aplicativo Next Boss</p>
         </div>
       </div>
     </div>
@@ -201,9 +207,11 @@
       </div>
       <div class="mt-10 grid md:grid-cols-2 gap-6">
         <!-- Plano Básico -->
-        <div class="rounded-2xl border border-slate-200 p-6 flex flex-col bg-white">
-          <h3 class="font-semibold">Básico</h3>
+        <div class="rounded-2xl border-2 border-slate-300 p-6 shadow-sm flex flex-col bg-white">
+          <!-- Selo só no Sob Consulta -->
+          <h3 class="font-semibold text-lg">Básico</h3>
           <p class="mt-1 text-slate-600 text-sm">Para implantar rapidamente o benefício</p>
+          <div class="mt-4 text-3xl font-extrabold text-ink-700">Sob consulta</div>
           <ul class="mt-4 space-y-2 text-sm text-slate-600">
             <li>✔ Trilhas essenciais personalizadas por IA</li>
             <li>✔ Gamificação e certificados</li>
@@ -214,9 +222,9 @@
         <!-- Plano Sob Consulta -->
         <div class="rounded-2xl border-2 border-brand-600 p-6 shadow-sm flex flex-col bg-white">
           <div class="inline-block self-start rounded-full bg-brand-600/10 text-brand-700 text-xs font-semibold px-2 py-1">Recomendado</div>
-          <h3 class="mt-2 font-semibold">Sob consulta</h3>
+          <h3 class="mt-2 font-semibold text-lg">Sob consulta</h3>
           <p class="mt-1 text-slate-600 text-sm">Para escala e integrações avançadas</p>
-          <div class="mt-4 text-3xl font-extrabold">Sob consulta</div>
+          <div class="mt-4 text-3xl font-extrabold text-brand-700">Sob consulta</div>
           <ul class="mt-4 space-y-2 text-sm text-slate-600">
             <li>✔ Personalização avançada por IA</li>
             <li>✔ Dashboards completos & SLA dedicado</li>
@@ -228,18 +236,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-20 bg-gradient-to-br from-brand-50 to-brand-100">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-ink-900">Pronto para subir de nível?</h2>
-      <p class="mt-3 text-slate-700">Crie sua conta em menos de 1 minuto e comece seu treino de soft skills agora.</p>
-      <form class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-        <input type="email" required placeholder="Seu e-mail" class="w-full sm:w-80 rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500">
-        <button class="rounded-xl bg-brand-600 px-5 py-3 font-semibold text-white hover:bg-brand-700">Criar conta</button>
-      </form>
-      <p class="mt-2 text-xs text-slate-500">Ao continuar, você aceita nossos Termos e Política de Privacidade.</p>
-    </div>
-  </section>
 
   <!-- FAQ -->
   <section id="faq" class="py-20">
