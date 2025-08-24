@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sua Marca — Landing Page</title>
+  <meta name="description" content="Produto/serviço incrível que resolve X de forma rápida e segura." />
+  <meta property="og:title" content="Sua Marca — Landing Page" />
+  <meta property="og:description" content="Produto/serviço incrível que resolve X de forma rápida e segura." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://placehold.co/1200x630/png" />
+
+  <!-- Tailwind via CDN (rápido para protótipo) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style> html{font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";} </style>
+</head>
+<body class="bg-white text-slate-800">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#" class="flex items-center gap-2 font-semibold">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white">S</span>
+          <span>SuaMarca</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#beneficios" class="hover:text-brand-700">Benefícios</a>
+          <a href="#precos" class="hover:text-brand-700">Preços</a>
+          <a href="#faq" class="hover:text-brand-700">FAQ</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="#" class="text-sm font-medium hover:text-brand-700">Entrar</a>
+          <a href="#cta" class="inline-flex items-center rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-brand-700">Começar</a>
+        </div>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300" aria-label="Abrir menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-3 space-y-2 text-sm">
+        <a href="#beneficios" class="block">Benefícios</a>
+        <a href="#precos" class="block">Preços</a>
+        <a href="#faq" class="block">FAQ</a>
+        <a href="#cta" class="block font-semibold text-brand-700">Começar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Explique em 1 frase o <span class="text-brand-700">valor principal</span> do seu produto.</h1>
+          <p class="mt-4 text-lg text-slate-600">Em 1–2 linhas, descreva o problema que você resolve e o benefício concreto. Foque no resultado, não na tecnologia.</p>
+          <form id="heroForm" class="mt-6 flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); document.getElementById('cta').scrollIntoView({behavior:'smooth'});">
+            <input type="email" required placeholder="Seu e-mail" class="w-full sm:w-72 rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500">
+            <button class="rounded-xl bg-brand-600 px-5 py-3 font-semibold text-white hover:bg-brand-700">Quero experimentar</button>
+          </form>
+          <div class="mt-4 flex items-center gap-4 text-sm text-slate-500">
+            <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293A1 1 0 003.293 10.707l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>Sem cartão</span>
+            <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293A1 1 0 003.293 10.707l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>Teste de 7 dias</span>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-video rounded-2xl bg-gradient-to-br from-brand-100 to-brand-300 shadow-inner"></div>
+          <p class="sr-only">Espaço para imagem ou vídeo do produto</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos de confiança -->
+  <section aria-label="Clientes" class="py-10 border-y border-slate-200 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm text-slate-500">Confiado por equipes em</p>
+      <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 opacity-70">
+        <div class="h-8 bg-slate-200 rounded"></div>
+        <div class="h-8 bg-slate-200 rounded"></div>
+        <div class="h-8 bg-slate-200 rounded"></div>
+        <div class="h-8 bg-slate-200 rounded"></div>
+        <div class="h-8 bg-slate-200 rounded"></div>
+        <div class="h-8 bg-slate-200 rounded"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section id="beneficios" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-bold">Por que escolher a <span class="text-brand-700">SuaMarca</span>?</h2>
+        <p class="mt-3 text-slate-600">Três a seis benefícios claros e orientados a resultado. Evite jargão.</p>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card -->
+        <div class="rounded-2xl border border-slate-200 p-6 hover:shadow-sm transition">
+          <div class="h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+            <span class="font-bold text-brand-700">1</span>
+          </div>
+          <h3 class="font-semibold">Resultado mensurável</h3>
+          <p class="mt-2 text-sm text-slate-600">Descreva um ganho concreto (ex.: +30% produtividade, -40% custos).</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 hover:shadow-sm transition">
+          <div class="h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+            <span class="font-bold text-brand-700">2</span>
+          </div>
+          <h3 class="font-semibold">Integra fácil</h3>
+          <p class="mt-2 text-sm text-slate-600">Explique como funciona com ferramentas existentes.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 hover:shadow-sm transition">
+          <div class="h-10 w-10 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
+            <span class="font-bold text-brand-700">3</span>
+          </div>
+          <h3 class="font-semibold">Segurança & suporte</h3>
+          <p class="mt-2 text-sm text-slate-600">Destaque privacidade, SLA, e canais de suporte.</p>
+        </div>
+        <!-- Adicione mais cards se quiser -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimento -->
+  <section class="py-16 bg-slate-50 border-y border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <figure class="rounded-2xl border border-slate-200 p-8 md:p-10 bg-white">
+        <blockquote class="text-xl md:text-2xl leading-relaxed">“Em 30 dias reduzimos o tempo de processo em 42%. A implementação foi simples e o time adorou.”</blockquote>
+        <figcaption class="mt-6 text-sm text-slate-500">— Nome do Cliente, Cargo na Empresa X</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Preços -->
+  <section id="precos" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl font-bold">Planos simples</h2>
+        <p class="mt-3 text-slate-600">Comece grátis e evolua quando precisar.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Plano -->
+        <div class="rounded-2xl border border-slate-200 p-6 flex flex-col">
+          <h3 class="font-semibold">Starter</h3>
+          <p class="mt-1 text-slate-600 text-sm">Para testar a solução</p>
+          <div class="mt-4 text-3xl font-extrabold">R$0<span class="text-base font-semibold text-slate-500">/mês</span></div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>✔ 1 projeto</li>
+            <li>✔ Suporte por e‑mail</li>
+          </ul>
+          <a href="#cta" class="mt-6 inline-flex justify-center rounded-xl bg-slate-900 px-4 py-3 text-white font-semibold hover:bg-slate-800">Começar grátis</a>
+        </div>
+        <div class="rounded-2xl border-2 border-brand-600 p-6 shadow-sm flex flex-col">
+          <div class="inline-block self-start rounded-full bg-brand-600/10 text-brand-700 text-xs font-semibold px-2 py-1">Mais popular</div>
+          <h3 class="mt-2 font-semibold">Pro</h3>
+          <p class="mt-1 text-slate-600 text-sm">Para equipes e profissionais</p>
+          <div class="mt-4 text-3xl font-extrabold">R$79<span class="text-base font-semibold text-slate-500">/mês</span></div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>✔ Projetos ilimitados</li>
+            <li>✔ Integrações</li>
+            <li>✔ Suporte prioritário</li>
+          </ul>
+          <a href="#cta" class="mt-6 inline-flex justify-center rounded-xl bg-brand-600 px-4 py-3 text-white font-semibold hover:bg-brand-700">Assinar Pro</a>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 flex flex-col">
+          <h3 class="font-semibold">Enterprise</h3>
+          <p class="mt-1 text-slate-600 text-sm">Para grandes organizações</p>
+          <div class="mt-4 text-3xl font-extrabold">Custom</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>✔ SSO/SAML</li>
+            <li>✔ SLA dedicado</li>
+            <li>✔ Onboarding guiado</li>
+          </ul>
+          <a href="#cta" class="mt-6 inline-flex justify-center rounded-xl bg-slate-900 px-4 py-3 text-white font-semibold hover:bg-slate-800">Falar com vendas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="py-20 bg-gradient-to-br from-brand-50 to-brand-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold">Pronto para testar?</h2>
+      <p class="mt-3 text-slate-700">Crie sua conta em menos de 1 minuto e experimente gratuitamente.</p>
+      <form class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <input type="email" required placeholder="Seu e-mail" class="w-full sm:w-80 rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500">
+        <button class="rounded-xl bg-brand-600 px-5 py-3 font-semibold text-white hover:bg-brand-700">Criar conta</button>
+      </form>
+      <p class="mt-2 text-xs text-slate-500">Ao continuar, você aceita nossos Termos e Política de Privacidade.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center">Perguntas frequentes</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <details class="rounded-2xl border border-slate-200 p-6">
+          <summary class="font-semibold cursor-pointer">Existe período de teste?</summary>
+          <p class="mt-2 text-sm text-slate-600">Sim, oferecemos 7 dias gratuitos sem cartão de crédito.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 p-6">
+          <summary class="font-semibold cursor-pointer">Posso cancelar quando quiser?</summary>
+          <p class="mt-2 text-sm text-slate-600">Claro, sem multas ou fidelidade.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 p-6">
+          <summary class="font-semibold cursor-pointer">Como funciona o suporte?</summary>
+          <p class="mt-2 text-sm text-slate-600">E‑mail no plano Starter; chat prioritário no Pro e Enterprise.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 p-6">
+          <summary class="font-semibold cursor-pointer">Há integrações?</summary>
+          <p class="mt-2 text-sm text-slate-600">Sim, conecte com as principais ferramentas do mercado.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-slate-500">© <span id="year"></span> SuaMarca. Todos os direitos reservados.</p>
+        <nav class="flex items-center gap-4 text-sm text-slate-600">
+          <a href="#" class="hover:text-brand-700">Termos</a>
+          <a href="#" class="hover:text-brand-700">Privacidade</a>
+          <a href="#" class="hover:text-brand-700">Contato</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Ano atual
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Menu mobile
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
